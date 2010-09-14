@@ -37,7 +37,7 @@ module.exports = function () {
 			request.end();
 		},
 
-		exports.assertStatus: function(code) {
+		assertStatus: function(code) {
 			return function (e, res) {
 				assert.equal (res.statusCode, code);
 			};
