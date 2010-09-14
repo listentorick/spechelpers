@@ -1,4 +1,5 @@
-var http = require('http');
+var http = require('http'),
+	assert = require('assert');
 
 
 module.exports = function () {
