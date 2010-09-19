@@ -22,9 +22,9 @@ module.exports = function () {
 			request.end();
 		},
 
-		postRequestBuilder: function(host, port, url, content, callback) {
+		postRequestBuilder: function(host, port, url, content, contentType, callback) {
 
-			var request = http.createClient(port, host).request("POST", url, {"Host": host, "Content-Length": content.length});
+			var request = http.createClient(port, host).request("POST", url, {"Host": host, "Content-Length": content.length, "content-type": contentType });
 			request.write(content);
 			
 			request.addListener('response', function (response) {
