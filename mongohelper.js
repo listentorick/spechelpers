@@ -1,8 +1,8 @@
 
 var Db = require('./lib/node-mongodb-native/lib/mongodb/db').Db,
 ObjectID = require('./lib/node-mongodb-native/lib/mongodb/bson/bson').ObjectID,
-Server = require('./lib/node-mongodb-native/lib/mongodb/connection').Server;
-
+Server = require('./lib/node-mongodb-native/lib/mongodb/connection').Server,
+Bundle = require('./lib/bundle/bundle').Bundle;
 
 module.exports = function MongoHelper() {
 
