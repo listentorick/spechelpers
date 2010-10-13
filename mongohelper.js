@@ -22,12 +22,12 @@ module.exports = function MongoHelper() {
 			
 			var bundle = new Bundle();		
 					
-			collectionName.forEach(function(collName,index) {
+			collectionName.forEach(function(colName,index) {
 			
-				bundle.add(function(collName) {
+				bundle.add(function(colName) {
 					return function(callback) {
 					
-						db.collection(collectionName, function(error, collection) {
+						db.collection(colName, function(error, collection) {
 							 if(error) {
 								db.close();
 								callback(error);
@@ -40,7 +40,7 @@ module.exports = function MongoHelper() {
 						})
 					}
 				
-				}(collName));
+				}(colName));
 				
 			});
 			
