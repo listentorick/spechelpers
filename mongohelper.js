@@ -1,6 +1,10 @@
 
+var Db = require('./lib/node-mongodb-native/lib/mongodb/db').Db,
+ObjectID = require('./lib/node-mongodb-native/lib/mongodb/bson/bson').ObjectID,
+Server = require('./lib/node-mongodb-native/lib/mongodb/connection').Server;
+	
 
-module.exports = function MongoHelper(Db, Server, ObjectID) {
+module.exports = function MongoHelper() {
 
 	return {
 
